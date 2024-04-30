@@ -16,23 +16,34 @@ import {
 	Table as TableRoot,
 	TableRow,
 } from '@/components/ui/table';
-import type { Post } from '@/entities/post';
+import type { Course } from '@/entities/course';
 import { Tanstack } from '@/lib/tanstack';
-import { UseDeletePostMutation } from '@/mutation/post';
+import { UseDeleteCourseMutation } from '@/mutation/course';
+
+const LevelMap = {
+	advanced: 'Avançado',
+	basic: 'Básico',
+	intermediary: 'Intermediário',
+};
+
+const PeriodMap = {
+	4: '4 meses',
+	6: '6 meses',
+};
 
 type Props = {
 	labels: string[];
-	data: Partial<Post>[];
+	data: Partial<Course>[];
 };
 
 export function Table({ data, labels }: Props): React.ReactElement {
-	const { mutateAsync: deletePost, status: deletePostStatus } =
-		UseDeletePostMutation({
+	const { mutateAsync: deleteCourse, status: deleteCourseStatus } =
+		UseDeleteCourseMutation({
 			onSuccess() {
 				Tanstack.refetchQueries({
-					queryKey: ['POST_PAGINATE_QUERY'],
+					queryKey: ['COURSE_PAGINATE_QUERY'],
 				});
-				toast.success('Postagem excluída com sucesso');
+				toast.success('Curso excluído com sucesso');
 			},
 			onError(error) {
 				// if (error instanceof AxiosError) {
@@ -54,25 +65,24 @@ export function Table({ data, labels }: Props): React.ReactElement {
 				{data?.map((item) => (
 					<TableRow key={item.id}>
 						<TableCell className="flex-1">
-							<h2 className="text-sm line-clamp-1">{item.title}</h2>
+							<h2 className="text-sm line-clamp-1">{item.name}</h2>
 						</TableCell>
-						{/* <TableCell>
-              <p className="line-clamp-1">{item.content}</p>
-            </TableCell> */}
-						{/* <TableCell>
-              <a href="#">{item.image}</a>
-            </TableCell> */}
-						<TableCell className="flex-1">{item.author?.name}</TableCell>
+						<TableCell className="flex-1">
+							{LevelMap[item.level as keyof typeof LevelMap]}
+						</TableCell>
+						<TableCell className="flex-1">
+							{PeriodMap[item.period as keyof typeof PeriodMap]}
+						</TableCell>
 						<TableCell className="w-[100px]">
 							<div className="flex gap-2">
-								<Link to={{ pathname: `/dashboard/post/${item.id}/edit` }}>
+								<Link to={{ pathname: `/dashboard/course/${item.id}/edit` }}>
 									<Button className="px-2 py-1 bg-transparent border-[#4763E4] border text-[#4763E4] hover:bg-[#4763E4]/90 hover:text-white">
 										<PencilSimpleLine size={18} />
 									</Button>
 								</Link>
 
 								<Link
-									to={{ pathname: `/blog/${item.id}` }}
+									to={{ pathname: `/course/${item.id}` }}
 									target="_blank"
 								>
 									<Button className="px-2 py-1 bg-transparent border-[#4763E4] border text-[#4763E4] hover:bg-[#4763E4]/90 hover:text-white">
@@ -82,13 +92,13 @@ export function Table({ data, labels }: Props): React.ReactElement {
 
 								<Button
 									className="px-2 py-1 bg-transparent border-[#4763E4] border text-[#4763E4] hover:bg-[#4763E4]/90 hover:text-white"
-									onClick={() => deletePost(item.id!)}
+									onClick={() => deleteCourse(item.id!)}
 								>
-									{deletePostStatus === 'pending' && (
+									{deleteCourseStatus === 'pending' && (
 										<CircleNotch className="animate-spin" />
 									)}
 
-									{!(deletePostStatus === 'pending') && <Trash size={18} />}
+									{!(deleteCourseStatus === 'pending') && <Trash size={18} />}
 								</Button>
 							</div>
 						</TableCell>

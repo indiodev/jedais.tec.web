@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { UsePostPaginateQuery } from '@/query/post';
+import { UseCoursePaginateQuery } from '@/query/course';
 
 import { Table } from './table';
 
 export function Course(): React.ReactElement {
 	const navigate = useNavigate();
 
-	const { data: posts, status } = UsePostPaginateQuery();
+	const { data: courses, status } = UseCoursePaginateQuery();
 
 	return (
 		<section className="flex flex-1 w-full h-full justify-center items-center flex-col gap-5 text-[#007bff]">
@@ -39,13 +39,8 @@ export function Course(): React.ReactElement {
 			<div className="flex-1 w-full">
 				{status === 'success' && (
 					<Table
-						labels={[
-							'Título',
-							// "Conteúdo",
-							// "Banner",
-							'Autor',
-						]}
-						data={posts.data}
+						labels={['Nome', 'Nível', 'Período']}
+						data={courses.data}
 					/>
 				)}
 			</div>

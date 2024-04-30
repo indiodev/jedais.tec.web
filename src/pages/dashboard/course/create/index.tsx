@@ -51,7 +51,9 @@ export function Create(): React.ReactElement {
 		},
 	);
 
-	const handleCreate = form.handleSubmit((data) => create(data));
+	const handleCreate = form.handleSubmit((data) =>
+		create({ ...data, period: Number(data.period) }),
+	);
 
 	return (
 		<section className="flex flex-1 w-full h-full justify-center items-center flex-col gap-5 text-[#007bff]">
