@@ -32,7 +32,7 @@ export function Blog(): React.ReactElement {
 									<div>
 										<span className="text-gray-700 text-xs">
 											{new Intl.DateTimeFormat('pt-BR', {}).format(
-												new Date(post.createdAt || post.created_at),
+												new Date(post.created_at),
 											)}{' '}
 											<strong>{post.author?.name}</strong>
 										</span>
