@@ -31,6 +31,13 @@ export function Private(): React.ReactElement {
 					>
 						<h2 className="text-white text-lg ">Cursos</h2>
 					</NavLink>
+
+					<NavLink
+						to="/dashboard/chatbot"
+						className="border-2 border-transparent w-full flex items-center justify-center py-2 aria-[current=page]:border-[#20c997] aria-[current=page]:border-2 aria-[current=page]:bg-transparent hover:bg-[#20c997]/90 text-white rounded-xl group"
+					>
+						<h2 className="text-white text-lg ">Chatbot</h2>
+					</NavLink>
 				</div>
 
 				<div className="flex flex-col text-white py-4 px-6 rounded-xl">
@@ -43,7 +50,7 @@ export function Private(): React.ReactElement {
 				</div>
 			</aside>
 
-			<div className="overflow-x-auto h-full py-14 w-full flex flex-1 flex-col px-8">
+			<div className="overflow-x-auto h-full py-14 w-full flex flex-1 flex-col px-8 bg-slate-100">
 				<div className="container flex">
 					<Outlet />
 				</div>

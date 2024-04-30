@@ -1,23 +1,14 @@
-import { MagnifyingGlass, Plus } from '@phosphor-icons/react';
-import { useNavigate } from 'react-router-dom';
+export function Chatbot(): React.ReactElement {
+	// const navigate = useNavigate();
 
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { UsePostPaginateQuery } from '@/query/post';
-
-import { Table } from './table';
-
-export function Course(): React.ReactElement {
-	const navigate = useNavigate();
-
-	const { data: posts, status } = UsePostPaginateQuery();
+	// const { data: posts, status } = UsePostPaginateQuery();
 
 	return (
 		<section className="flex flex-1 w-full h-full justify-center items-center flex-col gap-5 text-[#007bff]">
 			<div className="flex w-full">
-				<h1 className="text-2xl  font-bold">Cursos</h1>
+				<h1 className="text-2xl  font-bold">Chatbot</h1>
 			</div>
-			<div className="flex w-full gap-2">
+			{/* <div className="flex w-full gap-2">
 				<Input placeholder="Pesquise por título ou autor" />
 				<Button className="px-4 max-w-[150px] w-full bg-[#007bff]">
 					<MagnifyingGlass
@@ -35,9 +26,10 @@ export function Course(): React.ReactElement {
 						weight="bold"
 					/>
 				</Button>
-			</div>
+			</div> */}
 			<div className="flex-1 w-full">
-				{status === 'success' && (
+				<h2 className="text-2xl">Página ainda em construção</h2>
+				{/* {status === 'success' && (
 					<Table
 						labels={[
 							'Título',
@@ -47,7 +39,7 @@ export function Course(): React.ReactElement {
 						]}
 						data={posts.data}
 					/>
-				)}
+				)} */}
 			</div>
 		</section>
 	);

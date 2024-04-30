@@ -3,14 +3,14 @@ import { Route, Routes } from 'react-router-dom';
 import { Create } from './create';
 import { Edit } from './edit';
 
-import { Post } from '.';
+import { Chatbot } from '.';
 
 export function Router(): React.ReactElement {
 	return (
 		<Routes>
 			<Route
 				index
-				element={<Post />}
+				element={<Chatbot />}
 			/>
 			<Route
 				path="/create"
