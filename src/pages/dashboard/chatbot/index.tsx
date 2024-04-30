@@ -27,8 +27,8 @@ export function Chatbot(): React.ReactElement {
 					/>
 				</Button>
 			</div> */}
-			<div className="flex-1 w-full">
-				<h2 className="text-2xl">Página ainda em construção</h2>
+			<div className="flex-1 w-full flex justify-center items-center h-full border-2">
+				<h2 className="text-3xl font-bold">Página ainda em construção</h2>
 				{/* {status === 'success' && (
 					<Table
 						labels={[

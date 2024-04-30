@@ -1,7 +1,9 @@
-import { Auth } from "./auth";
-import { Post } from "./post";
+import { Auth } from './auth';
+import { Course } from './course';
+import { Post } from './post';
 
 export const Service = {
-  Auth: new Auth(),
-  Post: new Post(),
+	Auth: new Auth(),
+	Post: new Post(),
+	Course: new Course(),
 };

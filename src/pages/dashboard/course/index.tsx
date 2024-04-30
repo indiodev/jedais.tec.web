@@ -28,7 +28,7 @@ export function Course(): React.ReactElement {
 
 				<Button
 					className="px-4 max-w-[150px] w-full bg-[#007bff]"
-					onClick={() => navigate('/dashboard/post/create')}
+					onClick={() => navigate('/dashboard/course/create')}
 				>
 					<Plus
 						size={20}
