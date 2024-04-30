@@ -134,6 +134,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.3)
+  tiptap-extension-resize-image:
+    specifier: ^1.0.4
+    version: 1.0.4(@tiptap/core@2.3.0)(@tiptap/extension-image@2.3.0)(@tiptap/pm@2.3.0)
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -4071,6 +4074,18 @@ packages:
     resolution: {integrity: sha512-E1d3oP2emgJ9dRQZdf3Kkn0qJgI6ZLpyS5z6ZkY1DF3kaQaBsGZsndEpHwx+eC+tYM41HaSNvNtLx8tU57FzTQ==}
     dependencies:
       '@popperjs/core': 2.11.8
+    dev: false
+
+  /tiptap-extension-resize-image@1.0.4(@tiptap/core@2.3.0)(@tiptap/extension-image@2.3.0)(@tiptap/pm@2.3.0):
+    resolution: {integrity: sha512-1yU5ycCWnqm4kXFG/WIOoVubQAgnrWzD4C/44wslDo6Rfn8H/7T36Fz0NeYTio1SoZtqLy8S8DOZqubpd1/P1g==}
+    peerDependencies:
+      '@tiptap/core': ^2.0.0
+      '@tiptap/extension-image': ^2.0.0
+      '@tiptap/pm': ^2.0.0
+    dependencies:
+      '@tiptap/core': 2.3.0(@tiptap/pm@2.3.0)
+      '@tiptap/extension-image': 2.3.0(@tiptap/core@2.3.0)
+      '@tiptap/pm': 2.3.0
     dev: false
 
   /to-regex-range@5.0.1:
