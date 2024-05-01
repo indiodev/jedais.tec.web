@@ -75,7 +75,7 @@ export function Router(): React.ReactElement {
 
 					<Route element={<Layout.Home.Blog />}>
 						<Route
-							path="/blog/:id"
+							path="/blog/:slug"
 							element={<Blog />}
 						/>
 					</Route>

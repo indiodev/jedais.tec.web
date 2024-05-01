@@ -48,9 +48,8 @@ export function Blog(): React.ReactElement {
 										/>
 
 										<Link
-											to={`/blog/${post.id}`}
+											to={`/blog/${post.slug}`}
 											target="_blank"
-											// onClick={() => navigate(`/blog/${post.id}`)}
 											className="cursor-pointer font-extrabold bg-[#007bff] text-white px-4 py-1 rounded-full text-center w-32"
 										>
 											Leia mais

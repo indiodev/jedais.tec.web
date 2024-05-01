@@ -8,6 +8,7 @@ export type Post = {
 	content: string;
 	cover_image: string;
 	resume: string;
+	slug: string;
 	user_id?: number;
 	author?: User;
 };

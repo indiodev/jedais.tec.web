@@ -1,6 +1,6 @@
-import type { Meta } from "./meta";
+import type { Meta } from './meta';
 
 export type Paginate<T> = {
-  meta: Meta;
-  data: T;
+	meta: Meta;
+	data: T;
 };

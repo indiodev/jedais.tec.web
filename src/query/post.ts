@@ -16,8 +16,8 @@ async function PostPaginate(): Promise<Paginate<Post[]>> {
 	return await Service.Post.Paginate();
 }
 
-async function PostShow(id: number): Promise<Post> {
-	return await Service.Post.Show(id);
+async function PostShow(identifier: number | string): Promise<Post> {
+	return await Service.Post.Show(identifier);
 }
 
 export function UsePostPaginateQuery(): UsePostPaginateQuery {
@@ -27,10 +27,12 @@ export function UsePostPaginateQuery(): UsePostPaginateQuery {
 	});
 }
 
-export function UsePostShowQuery(id: number): UsePostShowQuery {
+export function UsePostShowQuery(
+	identifier: number | string,
+): UsePostShowQuery {
 	return useQuery({
-		queryKey: ['POST_SHOW_QUERY', id],
-		queryFn: () => PostShow(id),
-		enabled: !!id,
+		queryKey: ['POST_SHOW_QUERY', identifier],
+		queryFn: () => PostShow(identifier),
+		enabled: !!identifier,
 	});
 }

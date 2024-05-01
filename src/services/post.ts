@@ -9,8 +9,8 @@ import type { Post as Entity } from '@/entities/post';
 import { API } from '@/lib/api';
 
 export class Post {
-	async Show(id: number): Promise<Entity> {
-		const response = await API.get<Entity>(`/post/${id}`);
+	async Show(identifier: number | string): Promise<Entity> {
+		const response = await API.get<Entity>(`/post/${identifier}`);
 		return response.data;
 	}
 

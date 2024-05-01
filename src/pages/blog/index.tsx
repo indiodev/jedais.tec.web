@@ -13,12 +13,10 @@ import {
 import { UsePostShowQuery } from '@/query/post';
 
 export function Blog(): React.ReactElement {
-	const params = useParams() as { id: string };
+	const params = useParams() as { slug: string };
 	// const navigate = useNavigate();
 
-	const { data: post, status: postStatus } = UsePostShowQuery(
-		Number(params?.id),
-	);
+	const { data: post, status: postStatus } = UsePostShowQuery(params?.slug);
 
 	return (
 		<React.Fragment>

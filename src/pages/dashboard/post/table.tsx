@@ -72,7 +72,7 @@ export function Table({ data, labels }: Props): React.ReactElement {
 								</Link>
 
 								<Link
-									to={{ pathname: `/blog/${item.id}` }}
+									to={{ pathname: `/blog/${item.slug}` }}
 									target="_blank"
 								>
 									<Button className="px-2 py-1 bg-transparent border-[#4763E4] border text-[#4763E4] hover:bg-[#4763E4]/90 hover:text-white">
