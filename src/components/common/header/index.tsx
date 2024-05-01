@@ -82,61 +82,6 @@ export function Header(): React.ReactElement {
 							</Link>
 						</li>
 						<li className="cursor-pointer">
-							<li className="cursor-pointer">
-								<Link
-									to="courses"
-									spy={true}
-									smooth={true}
-									offset={-150}
-									duration={100}
-								>
-									Cursos
-								</Link>
-							</li>
-							<li className="cursor-pointer">
-								<Link
-									to="about"
-									spy={true}
-									smooth={true}
-									offset={-100}
-									duration={100}
-								>
-									Sobre
-								</Link>
-							</li>
-							<li className="cursor-pointer">
-								<Link
-									to="blog"
-									spy={true}
-									smooth={true}
-									offset={-110}
-									duration={100}
-								>
-									Blog
-								</Link>
-							</li>
-							<li className="cursor-pointer">
-								<Link
-									to="contact"
-									spy={true}
-									smooth={true}
-									offset={-110}
-									duration={100}
-								>
-									Contato
-								</Link>
-							</li>
-							<li className="cursor-pointer">
-								<a
-									href="https://wa.link/109jxe"
-									target="_blank"
-									className="cursor-pointer bg-[#20c997] px-4 py-2 rounded-full flex gap-2 items-center"
-									rel="noreferrer"
-								>
-									Fale conosco
-									<WhatsappLogo size={32} />
-								</a>
-							</li>
 							<a
 								href="https://wa.link/109jxe"
 								target="_blank"
