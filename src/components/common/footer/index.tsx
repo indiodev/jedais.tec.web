@@ -12,7 +12,9 @@ export function Footer(): React.ReactElement {
 					Desenvolvido por{' '}
 					<a
 						href="https://indio.dev.br"
-						className="cursor-pointer font-bold"
+						className="cursor-pointer font-bold underline"
+						target="_blank"
+						rel="noreferrer"
 					>
 						Jhollyfer Development
 					</a>
