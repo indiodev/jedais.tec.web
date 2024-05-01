@@ -56,12 +56,7 @@ export function Table({ data, labels }: Props): React.ReactElement {
 						<TableCell className="flex-1">
 							<h2 className="text-sm line-clamp-1">{item.title}</h2>
 						</TableCell>
-						{/* <TableCell>
-              <p className="line-clamp-1">{item.content}</p>
-            </TableCell> */}
-						{/* <TableCell>
-              <a href="#">{item.image}</a>
-            </TableCell> */}
+
 						<TableCell className="flex-1">{item.author?.name}</TableCell>
 						<TableCell className="w-[100px]">
 							<div className="flex gap-2">
