@@ -46,7 +46,7 @@ const Editor = React.forwardRef<HTMLDivElement, Props>(
 			},
 			editorProps: {
 				attributes: {
-					class: 'prose max-w-full text-xl',
+					class: 'prose max-w-full text-lg  sm:text-xl',
 				},
 			},
 		});

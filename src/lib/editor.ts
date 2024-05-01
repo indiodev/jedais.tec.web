@@ -1,14 +1,12 @@
+// import Image from "@tiptap/extension-image";
 import Link from '@tiptap/extension-link';
 import Placeholder from '@tiptap/extension-placeholder';
 import TaskItem from '@tiptap/extension-task-item';
 import TaskList from '@tiptap/extension-task-list';
 import TextAlign from '@tiptap/extension-text-align';
 import Underline from '@tiptap/extension-underline';
-// import { ReactNodeViewRenderer } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import ImageResize from 'tiptap-extension-resize-image';
-
-// import { ResizableImageTemplate } from '@/components/resizable.image';
 
 export const EDITOR_EXTENSIONS = [
 	StarterKit.configure(),
@@ -21,12 +19,6 @@ export const EDITOR_EXTENSIONS = [
 		},
 	}),
 	TaskList,
-	// Image.configure({
-	//   HTMLAttributes: {
-	//     class: "w-52 h-52",
-	//   },
-	//   allowBase64: true,
-	// }),
 	Underline,
 	Placeholder.configure({
 		placeholder: 'Escreva seu texto aqui',
@@ -37,5 +29,4 @@ export const EDITOR_EXTENSIONS = [
 	ImageResize.configure({
 		allowBase64: true,
 	}),
-	// CustomImage,
 ];

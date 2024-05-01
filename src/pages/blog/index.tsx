@@ -33,7 +33,7 @@ export function Blog(): React.ReactElement {
 			{postStatus === 'success' && (
 				<section className="container py-8 flex flex-col gap-8">
 					<Breadcrumb>
-						<BreadcrumbList className="text-[#007bff] text-lg">
+						<BreadcrumbList className="text-[#007bff] text-md sm:text-lg">
 							<BreadcrumbItem>
 								<BreadcrumbLink>
 									<Link to="/">Inicio</Link>
@@ -55,11 +55,11 @@ export function Blog(): React.ReactElement {
 					</Breadcrumb>
 
 					<div className="space-y-4">
-						<h2 className="text-2xl text-slate-800">
+						<h2 className="text-xl sm:text-2xl text-slate-800">
 							Bem-vindo ao blog da Jedais Tec!
 						</h2>
 
-						<p className="text-slate-600 text-lg">
+						<p className="text-slate-600 text-base sm:text-lg">
 							Estamos entusiasmados por tê-lo conosco no blog da Jedais Tec,
 							onde compartilhamos artigos, atualizações e histórias de sucesso
 							que inspiram e informam. Aqui é o lugar ideal para entusiastas da
@@ -73,8 +73,10 @@ export function Blog(): React.ReactElement {
 					</div>
 
 					<div className="flex flex-col gap-2 text-slate-400">
-						<h1 className="text-[#007bff] font-bold text-4xl">{post.title}</h1>
-						<div className="flex gap-1">
+						<h1 className="text-[#007bff] font-bold text-2xl sm:text-4xl">
+							{post.title}
+						</h1>
+						<div className="flex gap-1 flex-col sm:flex-row text-xs sm:text-sm">
 							<span className="block rounded-full ">
 								Publicado por <strong>{post.author?.name}</strong>,
 							</span>
@@ -94,7 +96,7 @@ export function Blog(): React.ReactElement {
 					<Editor
 						value={post.content}
 						editable={false}
-						className="border-0 text-gray-600 text-2xl p-0"
+						className="border-0 text-gray-600 p-0"
 					/>
 
 					{/* <div className="flex text-[#007bff] gap-2 flex-col">
