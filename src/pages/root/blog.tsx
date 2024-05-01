@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { Editor } from '@/components/editor';
+import { Editor } from '@/components/common/editor';
 import { UsePostPaginateQuery } from '@/query/post';
 
 export function Blog(): React.ReactElement {

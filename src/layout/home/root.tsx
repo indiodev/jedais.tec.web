@@ -1,13 +1,15 @@
-import React, { Fragment } from "react";
-import { Outlet } from "react-router-dom";
+import React, { Fragment } from 'react';
+import { Outlet } from 'react-router-dom';
 
-import { RootHeader } from "@/components/root-header";
+import { Footer } from '@/components/common/footer';
+import { Header } from '@/components/common/header';
 
 export function Root(): React.ReactElement {
-  return (
-    <Fragment>
-      <RootHeader />
-      <Outlet />
-    </Fragment>
-  );
+	return (
+		<Fragment>
+			<Header />
+			<Outlet />
+			<Footer />
+		</Fragment>
+	);
 }

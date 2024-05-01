@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import { Editor } from '@/components/editor';
+import { Editor } from '@/components/common/editor';
 import { Button } from '@/components/ui/button';
 import {
 	Form,

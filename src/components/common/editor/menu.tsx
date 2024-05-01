@@ -4,7 +4,7 @@ import React from 'react';
 import { MenuButtonEditorList } from '@/lib/constant';
 import { cn } from '@/lib/utils';
 
-import { Button } from '../ui/button';
+import { Button } from '../../ui/button';
 
 type Props = {
 	editor: Editor;

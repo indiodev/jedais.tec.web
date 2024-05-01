@@ -26,7 +26,6 @@ const Editor = React.forwardRef<HTMLDivElement, Props>(
 			editable = true,
 			mode = 'default',
 			className,
-			content,
 			value,
 			onChange,
 			...rest
@@ -47,7 +46,7 @@ const Editor = React.forwardRef<HTMLDivElement, Props>(
 			},
 			editorProps: {
 				attributes: {
-					class: 'prose max-w-full',
+					class: 'prose max-w-full text-xl',
 				},
 			},
 		});

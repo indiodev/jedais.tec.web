@@ -1,8 +1,13 @@
 import { WhatsappLogo, X } from '@phosphor-icons/react';
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-scroll';
-export function RootHeader(): React.ReactElement {
+export function Header(): React.ReactElement {
 	const [openMobileMenu, setOpenMobileMenu] = React.useState(false);
+
+	const { pathname } = useLocation();
+
+	const isBlogView = pathname.includes('blog');
 
 	return (
 		<header className="flex w-full bg-[#007bff] py-4 fixed z-50 shadow-md">
@@ -13,77 +18,137 @@ export function RootHeader(): React.ReactElement {
 						alt="Jedais Tec"
 						className="w-20 h-20"
 					/>
-					<h1 className="text-2xl font-bold">JEDAIS TEC</h1>
+					{!isBlogView && <h1 className="text-2xl font-bold">JEDAIS TEC</h1>}
+					{isBlogView && (
+						<h1 className="text-2xl font-bold">JEDAIS TEC BLOG</h1>
+					)}
 				</div>
 
-				<ul className="hidden lg:flex gap-4 text-xl font-bold items-center">
-					<li className="cursor-pointer">
-						<Link
-							to="home"
-							spy={true}
-							smooth={true}
-							offset={0}
-							duration={100}
-						>
-							Inicio
-						</Link>
-					</li>
-					<li className="cursor-pointer">
-						<Link
-							to="courses"
-							spy={true}
-							smooth={true}
-							offset={-150}
-							duration={100}
-						>
-							Cursos
-						</Link>
-					</li>
-					<li className="cursor-pointer">
-						<Link
-							to="about"
-							spy={true}
-							smooth={true}
-							offset={-100}
-							duration={100}
-						>
-							Sobre
-						</Link>
-					</li>
-					<li className="cursor-pointer">
-						<Link
-							to="blog"
-							spy={true}
-							smooth={true}
-							offset={-110}
-							duration={100}
-						>
-							Blog
-						</Link>
-					</li>
-					<li className="cursor-pointer">
-						<Link
-							to="contact"
-							spy={true}
-							smooth={true}
-							offset={-110}
-							duration={100}
-						>
-							Contato
-						</Link>
-					</li>
-					<li className="cursor-pointer">
-						<a
-							href="https://wa.link/109jxe"
-							target="_blank"
-							className="cursor-pointer bg-[#20c997] px-4 py-2 rounded-full flex gap-2 items-center"
-							rel="noreferrer"
-						>
-							Fale conosco
-							<WhatsappLogo size={32} />
-						</a>
-					</li>
-				</ul>
+				{!isBlogView && (
+					<ul className="hidden lg:flex gap-4 text-xl font-bold items-center">
+						<li className="cursor-pointer">
+							<Link
+								to="home"
+								spy={true}
+								smooth={true}
+								offset={0}
+								duration={100}
+							>
+								Inicio
+							</Link>
+						</li>
+						<li className="cursor-pointer">
+							<Link
+								to="courses"
+								spy={true}
+								smooth={true}
+								offset={-150}
+								duration={100}
+							>
+								Cursos
+							</Link>
+						</li>
+						<li className="cursor-pointer">
+							<Link
+								to="about"
+								spy={true}
+								smooth={true}
+								offset={-100}
+								duration={100}
+							>
+								Sobre
+							</Link>
+						</li>
+						<li className="cursor-pointer">
+							<Link
+								to="blog"
+								spy={true}
+								smooth={true}
+								offset={-110}
+								duration={100}
+							>
+								Blog
+							</Link>
+						</li>
+						<li className="cursor-pointer">
+							<Link
+								to="contact"
+								spy={true}
+								smooth={true}
+								offset={-110}
+								duration={100}
+							>
+								Contato
+							</Link>
+						</li>
+						<li className="cursor-pointer">
+							<li className="cursor-pointer">
+								<Link
+									to="courses"
+									spy={true}
+									smooth={true}
+									offset={-150}
+									duration={100}
+								>
+									Cursos
+								</Link>
+							</li>
+							<li className="cursor-pointer">
+								<Link
+									to="about"
+									spy={true}
+									smooth={true}
+									offset={-100}
+									duration={100}
+								>
+									Sobre
+								</Link>
+							</li>
+							<li className="cursor-pointer">
+								<Link
+									to="blog"
+									spy={true}
+									smooth={true}
+									offset={-110}
+									duration={100}
+								>
+									Blog
+								</Link>
+							</li>
+							<li className="cursor-pointer">
+								<Link
+									to="contact"
+									spy={true}
+									smooth={true}
+									offset={-110}
+									duration={100}
+								>
+									Contato
+								</Link>
+							</li>
+							<li className="cursor-pointer">
+								<a
+									href="https://wa.link/109jxe"
+									target="_blank"
+									className="cursor-pointer bg-[#20c997] px-4 py-2 rounded-full flex gap-2 items-center"
+									rel="noreferrer"
+								>
+									Fale conosco
+									<WhatsappLogo size={32} />
+								</a>
+							</li>
+							<a
+								href="https://wa.link/109jxe"
+								target="_blank"
+								className="cursor-pointer bg-[#20c997] px-4 py-2 rounded-full flex gap-2 items-center"
+								rel="noreferrer"
+							>
+								Fale conosco
+								<WhatsappLogo size={32} />
+							</a>
+						</li>
+					</ul>
+				)}
 
 				<button
 					data-collapse-toggle="navbar-default"
