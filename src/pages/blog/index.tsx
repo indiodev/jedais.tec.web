@@ -13,10 +13,12 @@ import {
 import { UsePostShowQuery } from '@/query/post';
 
 export function Blog(): React.ReactElement {
-	const params = useParams() as { slug: string };
+	const params = useParams() as { identifier: string };
 	// const navigate = useNavigate();
 
-	const { data: post, status: postStatus } = UsePostShowQuery(params?.slug);
+	const { data: post, status: postStatus } = UsePostShowQuery(
+		params?.identifier,
+	);
 
 	return (
 		<React.Fragment>
@@ -46,9 +48,7 @@ export function Blog(): React.ReactElement {
 							<BreadcrumbSeparator />
 							<BreadcrumbItem>
 								<BreadcrumbPage className="text-[#007bff] font-bold">
-									<Link to={`/blog/${post.id}`}>
-										{post.title.toLowerCase().split(' ').join('-')}
-									</Link>
+									<Link to={`/blog/${post.id}`}>{post.slug}</Link>
 								</BreadcrumbPage>
 							</BreadcrumbItem>
 						</BreadcrumbList>

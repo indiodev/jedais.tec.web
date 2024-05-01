@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 
-import { Editor } from '@/components/common/editor';
 import { UsePostPaginateQuery } from '@/query/post';
 
 export function Blog(): React.ReactElement {
@@ -41,11 +40,9 @@ export function Blog(): React.ReactElement {
 										</h2>
 									</div>
 									<div className="flex flex-col gap-4 line-clamp-3">
-										<Editor
-											mode="view"
-											content={post.content}
-											className="border-0 p-0 text-lg line-clamp-3 text-gray-500"
-										/>
+										<p className="text-lg line-clamp-3 text-gray-500">
+											{post.resume}
+										</p>
 
 										<Link
 											to={`/blog/${post.slug}`}
