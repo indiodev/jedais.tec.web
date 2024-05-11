@@ -1,4 +1,8 @@
-import { FacebookLogo, InstagramLogo } from '@phosphor-icons/react';
+import {
+	FacebookLogo,
+	InstagramLogo,
+	YoutubeLogo,
+} from '@phosphor-icons/react';
 
 export function Footer(): React.ReactElement {
 	return (
@@ -21,6 +25,16 @@ export function Footer(): React.ReactElement {
 							rel="noreferrer"
 						>
 							<FacebookLogo size={34} />
+						</a>
+					</li>
+
+					<li className="cursor-pointer">
+						<a
+							href="https://www.youtube.com/channel/UClC1ag-f2YC2P2UncMxts9w"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<YoutubeLogo size={34} />
 						</a>
 					</li>
 				</ul>
