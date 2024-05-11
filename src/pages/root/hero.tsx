@@ -1,3 +1,5 @@
+import Autoplay from 'embla-carousel-autoplay';
+
 import {
 	Carousel,
 	CarouselContent,
@@ -40,6 +42,11 @@ export function Hero(): React.ReactElement {
 			opts={{
 				loop: true,
 			}}
+			plugins={[
+				Autoplay({
+					delay: 10000,
+				}),
+			]}
 		>
 			<CarouselContent className="h-auto md:h-screen">
 				{ITEMS?.reverse().map((item) => (
