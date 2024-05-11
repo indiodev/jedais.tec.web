@@ -8,16 +8,17 @@ const ITEMS = [
 	{
 		id: 1,
 		image: '/image-1.png',
-		'bg-color': '#007bff',
+		background: 'bg-[#007bff]',
 		title: 'Educação tecnológica especializada, divertida e de qualidade.',
 		subtitle: 'Cursos incríveis e dinâmicos para seus filhos',
 	},
 	{
 		id: 2,
 		image: '/dias-maes.png',
-		'bg-color': '#FF0080',
-		title: 'Feliz dias das mães!',
-		subtitle: 'A equipe Jedais e alunos desejam um feliz dia das mães!',
+		background: 'bg-[#FF70AB]',
+		title: 'Celebrando o Amor Incondicional',
+		subtitle:
+			'Mãe, você é o coração pulsante de nossas vidas, a luz que nos ilumina mesmo nos dias mais sombrios. Obrigado por ser a personificação do amor, da sabedoria e da coragem. A equipe Jedais e alunos lhe deseja um Feliz Dia das Mães!',
 	},
 ];
 
@@ -30,14 +31,11 @@ export function Hero(): React.ReactElement {
 				loop: true,
 			}}
 		>
-			<CarouselContent
-				// className="h-auto md:h-screen relative overflow-x-hidden px-0 py-0 border-4"
-				className="h-auto md:h-screen"
-			>
-				{ITEMS?.map((item) => (
+			<CarouselContent className="h-auto md:h-screen">
+				{ITEMS?.reverse().map((item) => (
 					<CarouselItem
 						key={item.id}
-						className={`bg-[${item['bg-color']}] w-full`}
+						className={item.background}
 					>
 						<div
 							className={`container w-full flex h-full pt-32 md:pt-0 gap-2 md:gap-8 md:flex-row flex-col`}
@@ -55,7 +53,7 @@ export function Hero(): React.ReactElement {
 							<div className="flex h-full justify-center md:justify-end items-end">
 								<img
 									src={item.image}
-									className="object-cover md:h-3/4 h-1/2"
+									className="object-cover md:h-3/4 h-full"
 								/>
 							</div>
 						</div>
