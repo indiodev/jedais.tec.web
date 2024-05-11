@@ -11,6 +11,16 @@ const ITEMS = [
 		background: 'bg-[#007bff]',
 		title: 'Educação tecnológica especializada, divertida e de qualidade.',
 		subtitle: 'Cursos incríveis e dinâmicos para seus filhos',
+		link: (): React.ReactElement => {
+			return (
+				<a
+					href="#courses"
+					className="mt-4 bg-[#ED078B] px-6 py-3 rounded-full w-max font-bold cursor-pointer"
+				>
+					Veja nossos cursos
+				</a>
+			);
+		},
 	},
 	{
 		id: 2,
@@ -43,12 +53,7 @@ export function Hero(): React.ReactElement {
 							<div className="flex-1 flex flex-col justify-center gap-2 md:pt-20 pt-12">
 								<h2 className="text-5xl font-bold">{item.title}</h2>
 								<p className="text-xl">{item.subtitle}</p>
-								{/* <a
-									href="#courses"
-									className="mt-4 bg-[#ED078B] px-6 py-3 rounded-full w-max font-bold cursor-pointer"
-								>
-									Veja nossos cursos
-								</a> */}
+								{item.link && <item.link />}
 							</div>
 							<div className="flex h-full justify-center md:justify-end items-end">
 								<img
