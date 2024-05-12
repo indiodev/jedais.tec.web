@@ -1,3 +1,5 @@
+import Autoplay from 'embla-carousel-autoplay';
+
 import { Card, CardFooter, CardHeader } from '../../components/ui/card';
 import {
 	Carousel,
@@ -61,7 +63,14 @@ export function Professional(): React.ReactElement {
 				</p>
 
 				<div className="flex items-center justify-center pt-16">
-					<Carousel className="w-full max-w-xs">
+					<Carousel
+						className="w-full max-w-xs"
+						plugins={[
+							Autoplay({
+								delay: 5000,
+							}),
+						]}
+					>
 						<CarouselContent>
 							{Professionals?.map((professional) => (
 								<CarouselItem key={professional.id}>
