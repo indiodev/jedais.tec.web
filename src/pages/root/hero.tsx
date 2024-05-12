@@ -44,7 +44,7 @@ export function Hero(): React.ReactElement {
 			}}
 			plugins={[
 				Autoplay({
-					delay: 10000,
+					delay: 8000,
 				}),
 			]}
 		>
