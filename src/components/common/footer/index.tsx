@@ -43,7 +43,7 @@ export function Footer(): React.ReactElement {
 					Todos os direitos reservados &copy; Jedais Tec
 				</p>
 
-				<span className="opacity-10 text-xs sm:text-base">
+				<span className="opacity-5 text-xs sm:text-base text-green-400">
 					Desenvolvido por{' '}
 					<a
 						href="https://indio.dev.br"
@@ -51,7 +51,7 @@ export function Footer(): React.ReactElement {
 						target="_blank"
 						rel="noreferrer"
 					>
-						Jhollyfer Development
+						indio.dev
 					</a>
 				</span>
 			</div>

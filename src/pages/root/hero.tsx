@@ -24,14 +24,14 @@ const ITEMS = [
 			);
 		},
 	},
-	{
-		id: 2,
-		image: '/dias-maes.png',
-		background: 'bg-[#FF70AB]',
-		title: 'Celebrando o Amor Incondicional',
-		subtitle:
-			'Mãe, você é o coração pulsante de nossas vidas, a luz que nos ilumina mesmo nos dias mais sombrios. Obrigado por ser a personificação do amor, da sabedoria e da coragem. A equipe Jedais e alunos lhe deseja um Feliz Dia das Mães!',
-	},
+	// {
+	// 	id: 2,
+	// 	image: '/dias-maes.png',
+	// 	background: 'bg-[#FF70AB]',
+	// 	title: 'Celebrando o Amor Incondicional',
+	// 	subtitle:
+	// 		'Mãe, você é o coração pulsante de nossas vidas, a luz que nos ilumina mesmo nos dias mais sombrios. Obrigado por ser a personificação do amor, da sabedoria e da coragem. A equipe Jedais e alunos lhe deseja um Feliz Dia das Mães!',
+	// },
 ];
 
 export function Hero(): React.ReactElement {
@@ -49,7 +49,7 @@ export function Hero(): React.ReactElement {
 			]}
 		>
 			<CarouselContent className="h-auto md:h-screen">
-				{ITEMS?.reverse().map((item) => (
+				{ITEMS?.map((item) => (
 					<CarouselItem
 						key={item.id}
 						className={item.background}
