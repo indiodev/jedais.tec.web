@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export function About(): React.ReactElement {
 	return (
 		<section
@@ -27,16 +29,22 @@ export function About(): React.ReactElement {
 
 			<div className="container flex gap-12 w-full flex-col-reverse lg:flex-row">
 				<div className="flex flex-1 w-full flex-col gap-4">
-					<h2 className="text-2xl font-bold">Equipe Administrativa</h2>
+					<h2 className="text-2xl font-bold">Fundadores</h2>
 					<div className="flex flex-col gap-10 items-center justify-center">
 						<div className="flex gap-2 p-2 border border-blue-400">
-							<img
+							{/* <img
 								src="/professional-1.jpeg"
 								alt="Team image 1"
 								className="w-36 h-full object-cover"
-							/>
+							/> */}
 							<p className="text-justify text-lg">
-								<strong>João Aguila</strong> -{' '}
+								<Link
+									to={`/networking/joão-aguila`}
+									className="underline"
+								>
+									<strong>João Aguila</strong>
+								</Link>{' '}
+								-{' '}
 								<strong>
 									<em>Diretor Fundador</em>
 								</strong>{' '}
@@ -50,13 +58,19 @@ export function About(): React.ReactElement {
 						</div>
 
 						<div className="flex gap-2 p-2 border border-blue-400">
-							<img
+							{/* <img
 								src="/professional-2.jpeg"
 								alt="Team image 1"
 								className="w-36 h-full object-cover"
-							/>
+							/> */}
 							<p className="text-justify text-lg">
-								<strong>Thiago Castelo Branco</strong> -{' '}
+								<Link
+									to={`/networking/thiago-branco`}
+									className="underline"
+								>
+									<strong>Thiago C. Branco</strong>
+								</Link>{' '}
+								-{' '}
 								<strong>
 									<em>Co-Fundador</em>
 								</strong>{' '}

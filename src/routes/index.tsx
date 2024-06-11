@@ -7,6 +7,8 @@ import { API } from '@/lib/api';
 import { Blog } from '@/pages/blog';
 import { Auth } from '@/pages/dashboard/auth';
 import { Root } from '@/pages/root';
+import { Networking } from '@/pages/root/networking';
+import { NetworkingProfile } from '@/pages/root/networking/profile';
 import { useAuth } from '@/store/auth';
 
 const ChatbotRoute = React.lazy(() =>
@@ -79,6 +81,16 @@ export function Router(): React.ReactElement {
 							element={<Blog />}
 						/>
 					</Route>
+
+					<Route
+						path="/networking"
+						element={<Networking />}
+					/>
+
+					<Route
+						path="/networking/:slug"
+						element={<NetworkingProfile />}
+					/>
 				</Route>
 
 				<Route path="dashboard">

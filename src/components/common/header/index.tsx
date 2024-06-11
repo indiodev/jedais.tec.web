@@ -1,7 +1,7 @@
 import { WhatsappLogo, X } from '@phosphor-icons/react';
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-scroll';
+import { Link, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 export function Header(): React.ReactElement {
 	const [openMobileMenu, setOpenMobileMenu] = React.useState(false);
 
@@ -27,7 +27,7 @@ export function Header(): React.ReactElement {
 				{!isBlogView && (
 					<ul className="hidden lg:flex gap-4 text-xl font-bold items-center">
 						<li className="cursor-pointer">
-							<Link
+							<ScrollLink
 								to="home"
 								spy={true}
 								smooth={true}
@@ -35,10 +35,10 @@ export function Header(): React.ReactElement {
 								duration={100}
 							>
 								Inicio
-							</Link>
+							</ScrollLink>
 						</li>
 						<li className="cursor-pointer">
-							<Link
+							<ScrollLink
 								to="courses"
 								spy={true}
 								smooth={true}
@@ -46,10 +46,10 @@ export function Header(): React.ReactElement {
 								duration={100}
 							>
 								Cursos
-							</Link>
+							</ScrollLink>
 						</li>
 						<li className="cursor-pointer">
-							<Link
+							<ScrollLink
 								to="about"
 								spy={true}
 								smooth={true}
@@ -57,10 +57,10 @@ export function Header(): React.ReactElement {
 								duration={100}
 							>
 								Sobre
-							</Link>
+							</ScrollLink>
 						</li>
 						<li className="cursor-pointer">
-							<Link
+							<ScrollLink
 								to="blog"
 								spy={true}
 								smooth={true}
@@ -68,10 +68,10 @@ export function Header(): React.ReactElement {
 								duration={100}
 							>
 								Blog
-							</Link>
+							</ScrollLink>
 						</li>
 						<li className="cursor-pointer">
-							<Link
+							<ScrollLink
 								to="contact"
 								spy={true}
 								smooth={true}
@@ -79,8 +79,13 @@ export function Header(): React.ReactElement {
 								duration={100}
 							>
 								Contato
-							</Link>
+							</ScrollLink>
 						</li>
+
+						<li className="cursor-pointer">
+							<Link to="/networking">Networking</Link>
+						</li>
+
 						<li className="cursor-pointer">
 							<a
 								href="https://wa.link/109jxe"
@@ -138,7 +143,7 @@ export function Header(): React.ReactElement {
 						</div>
 						<ul className="w-full flex flex-1 flex-col gap-8 py-8 text-3xl font-bold items-center">
 							<li className="w-full flex justify-center items-center py-2 hover:bg-[#20c997]">
-								<Link
+								<ScrollLink
 									to="home"
 									spy={true}
 									smooth={true}
@@ -148,10 +153,10 @@ export function Header(): React.ReactElement {
 									onClick={() => setOpenMobileMenu((state) => !state)}
 								>
 									Inicio
-								</Link>
+								</ScrollLink>
 							</li>
 							<li className="w-full flex justify-center items-center py-2 hover:bg-[#20c997]">
-								<Link
+								<ScrollLink
 									to="courses"
 									spy={true}
 									smooth={true}
@@ -161,10 +166,10 @@ export function Header(): React.ReactElement {
 									onClick={() => setOpenMobileMenu((state) => !state)}
 								>
 									Cursos
-								</Link>
+								</ScrollLink>
 							</li>
 							<li className="w-full flex justify-center items-center py-2 hover:bg-[#20c997]">
-								<Link
+								<ScrollLink
 									to="about"
 									spy={true}
 									smooth={true}
@@ -174,10 +179,10 @@ export function Header(): React.ReactElement {
 									onClick={() => setOpenMobileMenu((state) => !state)}
 								>
 									Sobre
-								</Link>
+								</ScrollLink>
 							</li>
 							<li className="w-full flex justify-center items-center py-2 hover:bg-[#20c997]">
-								<Link
+								<ScrollLink
 									to="blog"
 									spy={true}
 									smooth={true}
@@ -187,10 +192,10 @@ export function Header(): React.ReactElement {
 									onClick={() => setOpenMobileMenu((state) => !state)}
 								>
 									Blog
-								</Link>
+								</ScrollLink>
 							</li>
 							<li className="w-full flex justify-center items-center py-2 hover:bg-[#20c997]">
-								<Link
+								<ScrollLink
 									to="contact"
 									spy={true}
 									smooth={true}
@@ -200,6 +205,15 @@ export function Header(): React.ReactElement {
 									onClick={() => setOpenMobileMenu((state) => !state)}
 								>
 									Contato
+								</ScrollLink>
+							</li>
+							<li className="w-full flex justify-center items-center py-2 hover:bg-[#20c997]">
+								<Link
+									to="/networking"
+									className="w-full text-center cursor-pointer flex gap-2 items-center justify-center"
+									onClick={() => setOpenMobileMenu((state) => !state)}
+								>
+									Networking
 								</Link>
 							</li>
 							<li className="w-full flex justify-center items-center text-[#63fdcf] py-6">

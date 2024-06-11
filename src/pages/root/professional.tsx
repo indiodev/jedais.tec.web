@@ -37,18 +37,18 @@ const Professionals = [
 		image: '/professional-4.jpeg',
 	},
 
-	{
-		id: 5,
-		name: 'Vitória Martins',
-		position: 'Secretária/Estagiária',
-		image: '/professional-5.jpeg',
-	},
-	{
-		id: 6,
-		name: 'Leny',
-		position: 'Tec. Geoprocessamento/secretária',
-		image: '/professional-6.jpeg',
-	},
+	// {
+	// 	id: 5,
+	// 	name: 'Vitória Martins',
+	// 	position: 'Secretária/Estagiária',
+	// 	image: '/professional-5.jpeg',
+	// },
+	// {
+	// 	id: 6,
+	// 	name: 'Leny',
+	// 	position: 'Tec. Geoprocessamento/secretária',
+	// 	image: '/professional-6.jpeg',
+	// },
 ];
 
 export function Professional(): React.ReactElement {
