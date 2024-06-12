@@ -6,7 +6,7 @@ const COURSES = [
 		public: '6 a 10 anos',
 		schedule: 'Segunda a sexta',
 		period: '4 meses',
-		price: 'R$ 150,00',
+		// price: 'R$ 150,00',
 	},
 	{
 		id: 2,
@@ -15,35 +15,35 @@ const COURSES = [
 		public: '13 a 16 anos',
 		schedule: 'Segunda a sexta',
 		period: '4 meses',
-		price: 'R$ 150,00',
+		// price: 'R$ 150,00',
 	},
 	{
 		id: 3,
-		name: 'Lógica de programação',
+		name: 'Lógica de Avançada',
 		level: 'Intermediário',
 		public: '11 a 16 anos',
 		schedule: 'Segunda a sexta',
 		period: '4 meses',
-		price: 'R$ 160,00',
+		// price: 'R$ 160,00',
 	},
-	{
-		id: 4,
-		name: 'Informática Básica',
-		level: 'Básica',
-		public: 'Adultos',
-		schedule: 'Segunda a sexta',
-		period: '4 meses',
-		price: 'R$ 180,00',
-	},
-	{
-		id: 5,
-		name: 'Informática Avançada',
-		level: 'Avançada',
-		public: 'Adultos',
-		schedule: 'Segunda a sexta',
-		period: '4 meses',
-		price: 'R$ 180,00',
-	},
+	// {
+	// 	id: 4,
+	// 	name: 'Informática Básica',
+	// 	level: 'Básica',
+	// 	public: 'Adultos',
+	// 	schedule: 'Segunda a sexta',
+	// 	period: '4 meses',
+	// 	price: 'R$ 180,00',
+	// },
+	// {
+	// 	id: 5,
+	// 	name: 'Informática Avançada',
+	// 	level: 'Avançada',
+	// 	public: 'Adultos',
+	// 	schedule: 'Segunda a sexta',
+	// 	period: '4 meses',
+	// 	price: 'R$ 180,00',
+	// },
 ];
 export function Course(): React.ReactElement {
 	return (
@@ -75,9 +75,9 @@ export function Course(): React.ReactElement {
 										<span className="font-medium px-4 rounded-full border-2">
 											{course.period}
 										</span>
-										<span className="font-medium bg-white text-[#007bff] px-4 rounded-full">
+										{/* <span className="font-medium bg-white text-[#007bff] px-4 rounded-full">
 											{course.price}
-										</span>
+										</span> */}
 									</div>
 									<p className="text-zinc-50 text-lg line-clamp-3">
 										Domine o essencial da informática com nosso curso: sistemas
