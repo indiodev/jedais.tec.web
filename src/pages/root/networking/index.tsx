@@ -51,7 +51,8 @@ export function Networking(): React.ReactElement {
 		<section className="bg-[#19a3ff] py-20 h-screen">
 			<div className="container h-full">
 				<h2 className="text-center font-bold text-3xl">
-					Conheça mais sobre a nossa equipe
+					{/* Conheça mais sobre a nossa equipe */}
+					Conheça nossa rede de apoiadores Jedais Tec
 				</h2>
 				<p className="text-center text-lg text-gray-100">
 					Acompanhe-nos e descubra mais sobre a nossa equipe
