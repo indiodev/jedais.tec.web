@@ -58,28 +58,20 @@ export function About(): React.ReactElement {
 						</div>
 
 						<div className="flex gap-2 p-2 border border-blue-400">
-							{/* <img
-								src="/professional-2.jpeg"
-								alt="Team image 1"
-								className="w-36 h-full object-cover"
-							/> */}
 							<p className="text-justify text-lg">
 								<Link
-									to={`/networking/thiago-branco`}
+									to={`/networking/marcos-jhollyfer`}
 									className="underline"
 								>
-									<strong>Thiago C. Branco</strong>
+									<strong>Marcos Jhollyfer</strong>
 								</Link>{' '}
 								-{' '}
 								<strong>
-									<em>Co-Fundador</em>
+									<em>Bacharel em Engenharia de Software</em>
 								</strong>{' '}
-								de 23 anos, Cursando Administração na <em>UFAM</em>. Tendo
-								atuado como Supervisor do Censo 2022 do <em>IBGE</em> e Escrivão
-								de Polícia Civil. Possui experiência acadêmica e prática. Ambos
-								os profissionais da Administração que cuidam da gestão da
-								startup, garantindo a organização e o suporte necessário para o
-								funcionamento eficaz da instituição.
+								pela <em>UFAM</em> com experiência no desenvolvimento de
+								aplicações web escaláveis e funcionais. Especialista em
+								tecnologia e inovação.
 							</p>
 						</div>
 					</div>

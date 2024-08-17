@@ -2,7 +2,6 @@ import { GameController, Graph, LightningA } from '@phosphor-icons/react';
 import React from 'react';
 
 import { About } from './about';
-import { Blog } from './blog';
 import { Contact } from './contact';
 import { Course } from './course';
 import { Hero } from './hero';
@@ -93,7 +92,7 @@ export function Root(): React.ReactElement {
 
 			<Course />
 			<Professional />
-			<Blog />
+			{/* <Blog /> */}
 			<About />
 			<Contact />
 		</>

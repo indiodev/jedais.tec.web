@@ -19,36 +19,10 @@ const Professionals = [
 
 	{
 		id: 2,
-		name: 'Thiago C. Branco',
-		position: 'Marketing e Professor',
-		image: '/professional-2.jpeg',
-	},
-	{
-		id: 3,
-		name: 'Roberto Wagner',
-		position: 'Relações públicas',
-		image: '/professional-3.jpeg',
-	},
-
-	{
-		id: 4,
 		name: 'Marcos Jhollyfer',
 		position: 'Eng. Software e Professor',
 		image: '/professional-4.jpeg',
 	},
-
-	// {
-	// 	id: 5,
-	// 	name: 'Vitória Martins',
-	// 	position: 'Secretária/Estagiária',
-	// 	image: '/professional-5.jpeg',
-	// },
-	// {
-	// 	id: 6,
-	// 	name: 'Leny',
-	// 	position: 'Tec. Geoprocessamento/secretária',
-	// 	image: '/professional-6.jpeg',
-	// },
 ];
 
 export function Professional(): React.ReactElement {
