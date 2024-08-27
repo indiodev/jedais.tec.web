@@ -9,8 +9,8 @@ import {
 const ITEMS = [
 	{
 		id: 1,
-		image: '/image-1.png',
-		background: 'bg-[#007bff]',
+		image: '/matricula.png',
+		background: 'bg-[#dbc800]',
 		// title: 'Educação tecnológica especializada, divertida e de qualidade.',
 		title: 'Matrículas abertas.',
 		subtitle: 'Se inscreva em um dos nossos cursos.',
@@ -20,7 +20,7 @@ const ITEMS = [
 					// href="#courses"
 					href="https://jedaistec.systeme.io/matricula2024"
 					target="_blank"
-					className="mt-4 bg-[#ED078B] px-6 py-3 rounded-full w-max font-bold cursor-pointer"
+					className="mt-4 bg-[#12db00] px-6 py-3 rounded-full w-max font-bold cursor-pointer"
 					rel="noreferrer"
 				>
 					{/* Veja nossos cursos */}
