@@ -11,15 +11,41 @@ const ITEMS = [
 		id: 1,
 		image: '/image-1.png',
 		background: 'bg-[#007bff]',
+		// title: 'Educação tecnológica especializada, divertida e de qualidade.',
+		title: 'Matrículas abertas.',
+		subtitle: 'Se inscreva em um dos nossos cursos.',
+		link: (): React.ReactElement => {
+			return (
+				<a
+					// href="#courses"
+					href="https://form.jotform.com/240957769482676"
+					target="_blank"
+					className="mt-4 bg-[#ED078B] px-6 py-3 rounded-full w-max font-bold cursor-pointer"
+					rel="noreferrer"
+				>
+					{/* Veja nossos cursos */}
+					Quero me matricular
+				</a>
+			);
+		},
+	},
+	{
+		id: 1,
+		image: '/image-1.png',
+		background: 'bg-[#007bff]',
 		title: 'Educação tecnológica especializada, divertida e de qualidade.',
-		subtitle: 'Cursos incríveis e dinâmicos para seus filhos',
+		subtitle: 'Uma nova forma de aprender.',
 		link: (): React.ReactElement => {
 			return (
 				<a
 					href="#courses"
+					// href="https://form.jotform.com/240957769482676"
+					// target="_blank"
 					className="mt-4 bg-[#ED078B] px-6 py-3 rounded-full w-max font-bold cursor-pointer"
+					rel="noreferrer"
 				>
 					Veja nossos cursos
+					{/* Quero me matricular */}
 				</a>
 			);
 		},
