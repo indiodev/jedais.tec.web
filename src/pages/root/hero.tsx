@@ -18,7 +18,7 @@ const ITEMS = [
 			return (
 				<a
 					// href="#courses"
-					href="https://form.jotform.com/240957769482676"
+					href="https://jedaistec.systeme.io/matricula2024"
 					target="_blank"
 					className="mt-4 bg-[#ED078B] px-6 py-3 rounded-full w-max font-bold cursor-pointer"
 					rel="noreferrer"
